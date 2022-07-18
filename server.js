@@ -10,20 +10,20 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
-const db = knex({
-    client: 'pg',
-    connection: {
-      host : '127.0.0.1',
-      port : 5432,
-      user : 'tzechong',
-      password : '',
-      database : 'smart-brain'
-    }
-  });
+// const db = knex({
+//     client: 'pg',
+//     connection: {
+//       host : '127.0.0.1',
+//       port : 5432,
+//       user : 'tzechong',
+//       password : '',
+//       database : 'smart-brain'
+//     }
+//   });
   
-db.select('*').from('users').then(data => {
-    console.log(data);
-});
+// db.select('*').from('users').then(data => {
+//     console.log(data);
+// });
 
 const app = express();
 app.use(bodyParser.json());
